@@ -78,8 +78,8 @@ double determinant(double matrix[25][25], int order){
       // calculate the determinant
       //generation of upper triangular matrix by Gaussian Elimination
 
-      for(i=0; i<order; i++){
-            for(j=0; j<order; j++){
+      for(i=0; i<order-1; i++){
+            for(j=i+1; j<order; j++){
 
                  if(i<j){
                       multiplier=matrix[j][i];
