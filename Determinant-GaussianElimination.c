@@ -82,11 +82,11 @@ double determinant(double matrix[25][25], int order){
             for(j=i+1; j<order; j++){
 
                  if(i<j){
-                      multiplier=matrix[i][k]/matrix[i][i];
+                      multiplier=matrix[j][i];
 
                       for(k=0; k<order; k++){
 
-                           matrix[j][k] = matrix[j][k]-multiplier*matrix[j][i];
+                           matrix[j][k] = matrix[j][k]-multiplier*(matrix[i][k]/matrix[i][i]);
                       }
                  }
             }
