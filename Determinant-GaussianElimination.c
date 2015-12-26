@@ -116,7 +116,7 @@ int main(){
       scanf("%d",&order);
 
       if(order == 0){  // Corner Case : Null matix
-          return ;
+          return 0;
       }
 
 	    printf("\nEnter the elements of the matrix: \n") ;
