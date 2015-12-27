@@ -1,3 +1,9 @@
+/* ==========================================================================
+   SelfTranspose.c
+   (c) 2015 Aparna Lavanya K
+   Program to find the Transpose of a Square Matrix - Inplace
+ ========================================================================== */
+
 #include<stdio.h>
 #include<stdlib.h>
 
