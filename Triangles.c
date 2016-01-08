@@ -50,7 +50,7 @@ void pascalsTriangle(int num) {
 	int c, i, j;
         
         printf("1\n");
-	for (i = 1; i <= num; i++) {
+	for (i = 1; i < num; i++) {
 		c = 1;
 		for (j = 0; j <= i; j++) {
 			printf("%d ", c);
