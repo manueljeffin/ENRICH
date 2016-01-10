@@ -1,9 +1,11 @@
 /* ==========================================================================
+
  Subsets.c
  By Aparna Lavanya K
  
  Program to print all the subsets
  of a given set of numbers
+ 
  ========================================================================== */
 
 #include<stdio.h>
