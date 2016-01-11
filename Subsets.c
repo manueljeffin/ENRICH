@@ -10,7 +10,6 @@
 
 #include<stdio.h>
 #include<stdlib.h>
-#include<math.h>
 
 void subsets(int *arr, int size);
 
@@ -35,7 +34,7 @@ void main() {
 
 void subsets(int *arr, int size) {
 	int i, j ;
-	int numSubsets = pow(size, 2);
+	int numSubsets = 1 << size;
 	
 	for (i = 1; i < numSubsets; i++) {
 		for (j = 0; j < size && j < i; j++) {
