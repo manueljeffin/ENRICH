@@ -11,9 +11,11 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<math.h>
+
 void subsets(int *arr, int size);
 
 void main() {
+	
 	int size, i;
 	int *arr;
 
@@ -32,9 +34,11 @@ void main() {
 }
 
 void subsets(int *arr, int size) {
+	int i, j ;
 	int numSubsets = pow(size, 2);
-	for (int i = 1; i < numSubsets; i++) {
-		for (int j = 0; j < size; j++) {
+	
+	for (i = 1; i < numSubsets; i++) {
+		for (j = 0; j < size && j < i; j++) {
 			if (i & (1 << j)) {
 				printf("%d ", arr[j]);
 			}
