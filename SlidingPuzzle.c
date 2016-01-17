@@ -87,7 +87,7 @@ void scramblePuzzle(int** puzzle) {
 
 	srand(time(NULL));
 
-	//dynamically rearrange the numbers on the puzzle
+	//dynamically rearrange the numbers in the puzzle
 	while (isSolved(puzzle)) {
 		for (i = 0; i < 25; i++) {
 			key = rand() % 5;
