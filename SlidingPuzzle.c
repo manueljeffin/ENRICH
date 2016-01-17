@@ -45,8 +45,7 @@ void main() {
 
 		slide(puzzle, move);
 
-	}
-	while (move != 'Q' && !isSolved(puzzle));
+	}while (move != 'Q' && !isSolved(puzzle));
 
 	system("clear");
 	printPuzzle(puzzle);
@@ -115,7 +114,7 @@ void slide(int** puzzle, char move) {
 	int row, col;
 	char temp;
 
-	switch (move) {
+	switch (move) {   //find the position to move the empty cell into
 	case 'U':
 		row = emptyRow - 1;
 		col = emptyCol;
@@ -140,15 +139,17 @@ void slide(int** puzzle, char move) {
 		return;
 	}
 
+	//check if the position is valid
 	if (row < 0 || row == size || col < 0 || col == size) {
 		return;
 	}
 
-	// swap
+	// swap the empty cell with the position found
 	temp = puzzle[emptyRow][emptyCol];
 	puzzle[emptyRow][emptyCol] = puzzle[row][col];
 	puzzle[row][col] = temp;
 
+	//update the empty cell's location
 	emptyRow = row;
 	emptyCol = col;
 }
