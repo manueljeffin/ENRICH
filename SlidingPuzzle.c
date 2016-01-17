@@ -75,8 +75,8 @@ int** initialisePuzzle(int size) {
 			puzzle[i][j] = val++;
 		}
 	}
-	puzzle[size - 1][size - 1] = 0;
-	emptyRow = emptyCol = size - 1;
+	puzzle[size - 1][size - 1] = 0;     //initialise empty cell
+	emptyRow = emptyCol = size - 1;     //initialise position of empty cell
 
 	return puzzle;
 }
@@ -159,7 +159,7 @@ int isSolved(int** puzzle) {
 	int flag = 1;
 	int val = 1;
 
-	puzzle[emptyRow][emptyCol] = size * size;
+	puzzle[emptyRow][emptyCol] = size * size;  //temporarily change value of empty cell to check if sorted
         
         //check if puzzle is sorted in ascending order
 	for (i = 0; i < size; i++) {
@@ -174,7 +174,7 @@ int isSolved(int** puzzle) {
 		}
 	}
 	
-	puzzle[emptyRow][emptyCol] = 0;
+	puzzle[emptyRow][emptyCol] = 0;     //restore the empty cell to original value
 
 	return flag;
 }
