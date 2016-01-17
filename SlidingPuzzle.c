@@ -158,7 +158,8 @@ int isSolved(int** puzzle) {
 	int val = 1;
 
 	puzzle[emptyRow][emptyCol] = size * size;
-
+        
+        //check if puzzle is sorted in ascending order
 	for (i = 0; i < size; i++) {
 		for (j = 0; j < size; j++) {
 			if (puzzle[i][j] != val++) {
@@ -170,6 +171,7 @@ int isSolved(int** puzzle) {
 			break;
 		}
 	}
+	
 	puzzle[emptyRow][emptyCol] = 0;
 
 	return flag;
