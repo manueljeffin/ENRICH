@@ -83,14 +83,14 @@ int** initialisePuzzle(int size) {
 
 void scramblePuzzle(int** puzzle) {
 	int i, key;
-	char move[5] = {'U', 'D', 'L', 'R', 'Q'};
+	char move[4] = {'U', 'D', 'L', 'R'};
 
 	srand(time(NULL));
 
 	// dynamically rearrange the numbers in the puzzle
 	while (isSolved(puzzle)) {
 		for (i = 0; i < 25; i++) {
-			key = rand() % 5;
+			key = rand() % 4;
 			slide(puzzle, move[key]);
 		}
 	}
