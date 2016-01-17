@@ -75,8 +75,8 @@ int** initialisePuzzle(int size) {
 			puzzle[i][j] = val++;
 		}
 	}
-	puzzle[size - 1][size - 1] = 0;     //initialise empty cell
-	emptyRow = emptyCol = size - 1;     //initialise position of empty cell
+	puzzle[size - 1][size - 1] = 0;     // initialise empty cell
+	emptyRow = emptyCol = size - 1;     // initialise position of empty cell
 
 	return puzzle;
 }
@@ -87,7 +87,7 @@ void scramblePuzzle(int** puzzle) {
 
 	srand(time(NULL));
 
-	//dynamically rearrange the numbers in the puzzle
+	// dynamically rearrange the numbers in the puzzle
 	while (isSolved(puzzle)) {
 		for (i = 0; i < 25; i++) {
 			key = rand() % 5;
@@ -114,7 +114,7 @@ void slide(int** puzzle, char move) {
 	int row, col;
 	char temp;
 
-	switch (move) {   //find the position to move the empty cell into
+	switch (move) {   // find the position to move the empty cell into
 	case 'U':
 		row = emptyRow - 1;
 		col = emptyCol;
@@ -139,7 +139,7 @@ void slide(int** puzzle, char move) {
 		return;
 	}
 
-	//check if the position is valid
+	// check if the position is valid
 	if (row < 0 || row == size || col < 0 || col == size) {
 		return;
 	}
@@ -149,7 +149,7 @@ void slide(int** puzzle, char move) {
 	puzzle[emptyRow][emptyCol] = puzzle[row][col];
 	puzzle[row][col] = temp;
 
-	//update the empty cell's location
+	// update the empty cell's location
 	emptyRow = row;
 	emptyCol = col;
 }
@@ -159,9 +159,9 @@ int isSolved(int** puzzle) {
 	int flag = 1;
 	int val = 1;
 
-	puzzle[emptyRow][emptyCol] = size * size;  //temporarily change value of empty cell to check if sorted
+	puzzle[emptyRow][emptyCol] = size * size;  // temporarily change value of empty cell to check if sorted
         
-        //check if puzzle is sorted in ascending order
+        // check if puzzle is sorted in ascending order
 	for (i = 0; i < size; i++) {
 		for (j = 0; j < size; j++) {
 			if (puzzle[i][j] != val++) {
@@ -174,7 +174,7 @@ int isSolved(int** puzzle) {
 		}
 	}
 	
-	puzzle[emptyRow][emptyCol] = 0;     //restore the empty cell to original value
+	puzzle[emptyRow][emptyCol] = 0;      // restore the empty cell to original value
 
 	return flag;
 }
