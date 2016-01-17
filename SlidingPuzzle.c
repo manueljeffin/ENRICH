@@ -70,7 +70,7 @@ int** initialisePuzzle(int size) {
 		puzzle[i] = (int*) malloc(size*sizeof(int));
 	}
 
-	// initialise puzzle
+	// initialise puzzle with numbers
 	for (i = 0; i < size; i++) {
 		for (j = 0; j < size; j++) {
 			puzzle[i][j] = val++;
@@ -88,6 +88,7 @@ void scramblePuzzle(int** puzzle) {
 
 	srand(time(NULL));
 
+	//dynamically rearrange the numbers on the puzzle
 	while (isSolved(puzzle)) {
 		for (i = 0; i < 25; i++) {
 			key = rand() % 5;
