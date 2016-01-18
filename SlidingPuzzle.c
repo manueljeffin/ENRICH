@@ -50,11 +50,12 @@ void main() {
 	system("clear");
 	printPuzzle(puzzle);
 
-	if (isSolved(puzzle)) {
-		printf("\nSliding Puzzle is solved! \nCongratulations! You have won!\n");
-	}
-	else {
+	if(move == 'Q') {
 		printf("\nYou quit...");
+	}
+	
+	else {
+		printf("\nSliding Puzzle is solved! \nCongratulations! You have won!\n");
 	}
 }
 
