@@ -3,7 +3,7 @@
  Aparna Lavanya K
 
  Program to Reverse a given Number,
- Iteratively
+ Iteratively and to Print the Leading zeros
  ========================================================================== */
 
 #include <stdio.h>
