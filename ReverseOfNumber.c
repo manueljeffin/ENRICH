@@ -11,7 +11,7 @@
 int reverseNumber(int);
 
 void main() {
-	int num, rev;
+	int num;
 
 	printf("Enter a number: ");
 	scanf("%d", &num);
