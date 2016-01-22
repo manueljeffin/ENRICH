@@ -8,7 +8,7 @@
 
 #include <stdio.h>
 
-int reverseNumber(int, int*);
+int reverseNumber(int, int *);
 
 void main() {
       int num, rev, digits = 0;
@@ -21,7 +21,7 @@ void main() {
 	     printf("\nReversed number is: %0*d\n", digits, rev);   //prints the leading zeros too
 }
 
-int reverseNumber(int num, int* digits) {
+int reverseNumber(int num, int *digits) {
 	    int rev = 0;
 
 	    while (num > 0) {
