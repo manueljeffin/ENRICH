@@ -20,12 +20,12 @@ void main() {
 }
 
 int reverseNumber(int num) {
-	int rev = 0;
+	int revDigit = 0;
 
 	while (num > 0) {
-		rev = num % 10;
+		revDigit = num % 10;
 		num = num / 10;
-		printf("%d", rev);
+		printf("%d", revDigit);
 	}
 
 	return rev;
