@@ -17,7 +17,7 @@ int main() {
 	printf("Enter a number :");
 	scanf("%d", &num);
 
-	printf("Enter a base :");
+	printf("\nEnter a base :");
 	scanf("%d", &base);
 
 	baseConvert(num, base);
@@ -38,12 +38,12 @@ void baseConvert(int num, int base) {
 	int half, i;
 
 	if (base < 2 || base > 36) { // only bases from 2 to 36 is supported
-		printf("Try Again with different base");
+		printf("\nTry Again with different base");
 		return;
 	}
 
 	if (num < base) {
-		printf("The number %d in base %d is: %d", num, base, num);
+		printf("\nThe number %d in base %d is: %d", num, base, num);
 		return;
 	}
 
@@ -60,5 +60,5 @@ void baseConvert(int num, int base) {
 		result[i] = result[count - i - 1];
 		result[count - i - 1] = temp;
 	}
-	printf("The number %d in base %d is: %s", num, base, result);
+	printf("\nThe number %d in base %d is: %s", num, base, result);
 }
