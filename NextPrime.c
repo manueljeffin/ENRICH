@@ -1,0 +1,57 @@
+/* ==========================================================================
+ NextPrime.c
+ Aparna Lavanya K
+ 
+ Program to find the next Prime
+ Number given a positive number
+ ========================================================================== */
+
+#include<stdio.h>
+#include<math.h>
+
+int nextPrime(int);
+
+int main(){
+
+	int num, next;
+	
+	printf("Enter a positive number: ");
+	scanf("%d", &num);
+	
+	if(num < 0){
+		return 0;
+	}
+	
+	next = nextPrime(num);
+	
+	printf("The prime number next to %d is: %d", num, next);
+	
+	return 0;
+}
+
+int nextPrime(int num){
+	
+	int i,count;
+	int flag = 1;
+	
+	if(num < 2){
+		return 2;
+	}
+	
+	while(flag){
+	    count = 0;
+	    num++;
+	    
+		for(i=2; i<= sqrt(num); i++){
+			if(num%i == 0){
+				count++;
+			}
+		}
+		
+		if(count == 0){
+		    flag = 0;  
+		}
+		
+	}
+	return num;
+}
