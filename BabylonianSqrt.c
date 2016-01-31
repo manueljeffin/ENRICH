@@ -1,5 +1,5 @@
 /* ==========================================================================
- BabylonSqrt.c
+ BabylonianSqrt.c
  Aparna Lavanya K
  
  Program to find the Square root
@@ -8,7 +8,7 @@
 
 #include<stdio.h>
 
-float babylonSqrt(int);
+float babylonianSqrt(int);
 
 int main(){
 	int num;
@@ -21,13 +21,13 @@ int main(){
 	    return 0;
 	}
 	
-	root = babylonSqrt(num);
+	root = babylonianSqrt(num);
 	
 	printf("\nSquare Root of %d is: %f", num, root);
 	
 	return 0;
 }
-float babylonSqrt(int num){
+float babylonianSqrt(int num){
 	
 	float n = num, approx = 1;
 	float diff = n - approx;
