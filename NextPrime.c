@@ -24,7 +24,7 @@ int main(){
 	
 	next = nextPrime(num);
 	
-	printf("The prime number next to %d is: %d", num, next);
+	printf("\nThe prime number next to %d is: %d", num, next);
 	
 	return 0;
 }
