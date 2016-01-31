@@ -18,7 +18,7 @@ int main(){
 	printf("Enter a positive number: ");
 	scanf("%d", &num);
 	
-	if(num < 0){
+	if(num < 0){    // cannot have negative numbers
 		return 0;
 	}
 	
@@ -48,7 +48,7 @@ int nextPrime(int num){
 			}
 		}
 		
-		if(count == 0){
+		if(count == 0){  // prime number found
 		    flag = 0;  
 		}
 		
