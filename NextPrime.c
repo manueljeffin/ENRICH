@@ -39,6 +39,7 @@ int nextPrime(int num){
 	}
 	
 	while(flag){
+		
 	    count = 0;
 	    num++;
 	    
