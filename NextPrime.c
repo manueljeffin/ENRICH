@@ -45,6 +45,7 @@ int nextPrime(int num){
 		for(i=2; i<= sqrt(num); i++){
 			if(num%i == 0){
 				count++;
+				break; // not a prime number
 			}
 		}
 		
