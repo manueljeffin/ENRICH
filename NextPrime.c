@@ -2,7 +2,7 @@
  NextPrime.c
  Aparna Lavanya K
  
- Program to find the next Prime
+ Program to find the Next Prime
  Number given a positive number
  ========================================================================== */
 
