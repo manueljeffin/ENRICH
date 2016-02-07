@@ -27,12 +27,12 @@ int main() {
 }
 
 char* longestUniqueSubstring(char str[], int *len) {
-	*len = 0; // length of substr
-
-	int *flag = (int *) calloc(26, sizeof(char));
-	// to keep track of characters visited
+	
 	char* substr = (char *) malloc(sizeof(str));
-
+	*len = 0; // length of substr
+	
+	int *flag = (int *) calloc(26, sizeof(char));  // to keep track of characters visited
+	
 	int i, j, pos;
 	int start = 0;
 
