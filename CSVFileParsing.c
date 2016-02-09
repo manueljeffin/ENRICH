@@ -15,8 +15,8 @@ struct student {
 	int marks[5];
 }*stud;
 
-void averageMarks(struct student *stud, int noStud, float avg[]);
-void highestScore(struct student *stud, int noStud, char *high[]);
+void averageMarks(int noStud, float avg[]);
+void highestScore(int noStud, char *high[]);
 
 int main() {
 
@@ -64,8 +64,8 @@ int main() {
 	float avg[5] = {0};
 	char *high[5];
 
-	averageMarks(stud, noStud, avg);
-	highestScore(stud, noStud, high);
+	averageMarks(noStud, avg);
+	highestScore(noStud, high);
 
 	printf("\nAVERAGE MARKS :\n\n");
 
@@ -82,7 +82,7 @@ int main() {
 	return 0;
 }
 
-void averageMarks(struct student *stud, int noStud, float avg[]) {
+void averageMarks(int noStud, float avg[]) {
 	int i, j;
 	for (i = 0; i < 5; i++) {
 		for (j = 0; j < noStud; j++) {
@@ -94,7 +94,7 @@ void averageMarks(struct student *stud, int noStud, float avg[]) {
 	}
 }
 
-void highestScore(struct student *stud, int noStud, char *high[]) {
+void highestScore(int noStud, char *high[]) {
 	int i, j;
 	int max[5] = {0};
 	for (i = 0; i < 5; i++) {
