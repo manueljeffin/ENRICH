@@ -29,44 +29,39 @@ int main() {
 void numToWords(int num) {
 
 	char *words[] = {
-		"one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
+		"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
 		"ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen",
 		"seventeen", "eighteen", "nineteen", "twenty", "thirty", "forty",
 		"fifty", "sixty", "seventy", "eighty", "ninety"};
 	int tens, hundreds;
 
-	if (num == 0) {
-		printf("zero");
-		return;
-	}
-
-	else if (num <= 20) {
-		printf("%s ", words[num - 1]);
+	if (num <= 20) {
+		printf("%s ", words[num]);
 		return;
 	}
 
 	else if (num < 100) {
 		tens = num / 10;
-		printf("%s ", words[17 + tens]); // for numbers like 30, 40, 50,...
+		printf("%s ", words[18 + tens]); // for numbers like 30, 40, 50,...
 		if (tens != 0) {
-			printf("%s ", words[(num % 10) - 1]);
+			printf("%s ", words[num % 10]);
 		}
 		return;
 	}
 
 	else {
 		hundreds = num / 100;
-		printf("%s hundred ", words[hundreds - 1]);
+		printf("%s hundred ", words[hundreds]);
 		tens = num % 100;
 		if (tens != 0) {
 			if (tens <= 20) {
-				printf("and %s", words[tens - 1]);
+				printf("and %s", words[tens]);
 			}
 			else { // for numbers like 30, 40, 50,...
 				tens = tens / 10;
-				printf("and %s ", words[17 + tens]);
+				printf("and %s ", words[18 + tens]);
 				if (tens != 0) {
-					printf("%s ", words[(num % 10) - 1]);
+					printf("%s ", words[num % 10]);
 				}
 			}
 		}
