@@ -29,10 +29,10 @@ int main() {
 void numToWords(int num) {
 
 	char *words[] = {
-		"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
-		"ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen",
-		"seventeen", "eighteen", "nineteen", "twenty", "thirty", "forty",
-		"fifty", "sixty", "seventy", "eighty", "ninety"};
+		"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", 
+		"nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", 
+		"sixteen", "seventeen", "eighteen", "nineteen", "twenty", "thirty",
+		"forty", "fifty", "sixty", "seventy", "eighty", "ninety"};
 	int tens, hundreds;
 
 	if (num <= 20) {
