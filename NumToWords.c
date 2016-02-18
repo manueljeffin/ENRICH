@@ -1,7 +1,6 @@
 /* ==========================================================================
  NumToWords.c
  Aparna Lavanya K
-
  Program to print the Word Representation
  of a given number (0-999)
  ========================================================================== */
@@ -9,6 +8,13 @@
 #include<stdio.h>
 
 void numToWords(int num);
+void twoDigits(int num);
+
+char *words[] = {
+	"zero", "one", "two", "three", "four", "five", "six", "seven", "eight",
+	"nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen",
+	"sixteen", "seventeen", "eighteen", "nineteen", "twenty", "thirty", "forty",
+	"fifty", "sixty", "seventy", "eighty", "ninety"};
 
 int main() {
 
@@ -19,34 +25,31 @@ int main() {
 	if (num > 999) {
 		return 0;
 	}
-	
-  printf("\n");
+
+	printf("\n");
 	numToWords(num);
 
 	return 0;
 }
 
-void numToWords(int num) {
-
-	char *words[] = {
-		"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", 
-		"nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", 
-		"sixteen", "seventeen", "eighteen", "nineteen", "twenty", "thirty",
-		"forty", "fifty", "sixty", "seventy", "eighty", "ninety"};
-	int tens, hundreds;
-
+void twoDigits(int num) {
 	if (num <= 20) {
 		printf("%s ", words[num]);
 		return;
 	}
 
-	else if (num < 100) {
-		tens = num / 10;
-		printf("%s ", words[18 + tens]); // for numbers like 30, 40, 50,...
-		if (tens != 0) {
-			printf("%s ", words[num % 10]);
-		}
-		return;
+	int tens = num / 10;
+	printf("%s ", words[18 + tens]); // for numbers like 30, 40, 50,...
+	if (tens != 0) {
+		printf("%s ", words[num % 10]);
+	}
+}
+
+void numToWords(int num) {
+	int tens, hundreds;
+
+	if (num < 100) {
+		twoDigits(num);
 	}
 
 	else {
@@ -54,17 +57,8 @@ void numToWords(int num) {
 		printf("%s hundred ", words[hundreds]);
 		tens = num % 100;
 		if (tens != 0) {
-			if (tens <= 20) {
-				printf("and %s", words[tens]);
-			}
-			else { // for numbers like 30, 40, 50,...
-				tens = tens / 10;
-				printf("and %s ", words[18 + tens]);
-				if (tens != 0) {
-					printf("%s ", words[num % 10]);
-				}
-			}
+			printf("and ");
+			twoDigits(tens);
 		}
 	}
-	return;
 }
