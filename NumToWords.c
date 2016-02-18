@@ -7,8 +7,8 @@
 
 #include<stdio.h>
 
-void numToWords(int num);
-void twoDigits(int num);
+void numToWords(int);
+void twoDigits(int);
 
 char *words[] = {
 	"zero", "one", "two", "three", "four", "five", "six", "seven", "eight",
