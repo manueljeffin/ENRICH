@@ -21,7 +21,7 @@ int main() {
 		return 0;
 	}
 
-	printf("\nThe Next Immediate Palindrome: %d", nextPalindrome(num));
+	printf("\nThe next immediate palindrome: %d", nextPalindrome(num));
 
 	return 0;
 }
@@ -42,8 +42,8 @@ int nextPalindrome(int num) {
 
 	int digits[10] = {0};
 	int digitCount = extractDigits(num + 1, digits);
-	int palindrome = 0;
 	int i = 0, j = digitCount - 1;
+	int palindrome = 0;
 	int flag = 1; // to indicate if number was decreased
 
 	while (i <= j) {
@@ -58,15 +58,27 @@ int nextPalindrome(int num) {
 		i++;
 		j--;
 	}
-	i--; 	// i now points to the middle element
+	i--;
 
+	// i now points to the middle element
 	if (flag == 0) {
-		// since number was decreased, increment digit in middle position
-		digits[i]++;
-		digits[digitCount - 1 - i] = digits[i];
+		// since number was decreased increment digit in mean position
+		if (digits[i] != 9) {
+			digits[i]++;
+			digits[digitCount - 1 - i] = digits[i];
+		}
+		else { // for numbers like 191, 1991,...
+			while (digits[i] == 9) {
+				digits[i] = 0;
+				digits[digitCount - 1 - i] = digits[i];
+				i--;
+			}
+			digits[i]++;
+			digits[digitCount - 1 - i] = digits[i];
+		}
 	}
 
-	// form palindrome number
+	// form number
 	palindrome = digits[0];
 	for (i = 1; i < digitCount; i++) {
 		palindrome = palindrome * 10 + digits[i];
