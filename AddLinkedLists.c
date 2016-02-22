@@ -68,7 +68,6 @@ struct node* makeList(int num) {
 
 struct node* reverseList(struct node *head) {
 	struct node *newHead = NULL;
-
 	struct node *temp;
 
 	while (head != NULL) {
