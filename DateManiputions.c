@@ -6,7 +6,7 @@
  Date Manipulations
  ========================================================================== */
 
-#include < stdio.h >
+#include <stdio.h>
 
 struct date {
   int year;
