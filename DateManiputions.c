@@ -50,6 +50,7 @@ int main() {
     printf("\n\nDay name: %s", dayOfWeek(d));
     printf("\n\nDay index: %d", dayIndex(d));
 
+
     printf("\n\nDATE BEFORE N DAYS: ");
     printf("\nEnter value for N: ");
     scanf("%d", &N);
@@ -58,6 +59,7 @@ int main() {
     }
     struct date before = dateBeforeNDays(d, N);
     printf("\nDate before N days: %04d-%02d-%02d", before.year, before.month, before.day);
+
 
     printf("\n\nDAYS BETWEEN DATES: ");
     printf("\nEnter another date: ");
