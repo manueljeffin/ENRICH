@@ -18,6 +18,6 @@ struct contact{
     char* street;
     char* area;
     char* city;
-    struct person *p;
+    struct person p[5];
 }*c;
 
