@@ -1,6 +1,7 @@
 /* ==========================================================================
-   SelfTranspose2.c
-   (c) 2015 Aparna Lavanya K
+   SelfTranspose1.c
+   Aparna Lavanya K
+   
    Program to find the Transpose of a Square Matrix - Inplace
  ========================================================================== */
 #include<stdio.h>
