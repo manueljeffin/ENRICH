@@ -108,6 +108,7 @@ int hashing(struct student *s, int numStud) {
 		
 		else {    //make new entry
 			strcpy(h[keysCount].firstName, s[i].firstName);
+			h[keysCount].count = 0;
 			h[keysCount].ids[h[keysCount].count] = s[i].id;
 			h[keysCount].count++;
 			keysCount++;
