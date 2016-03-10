@@ -6,7 +6,7 @@
  Binary tree is Sum tree
  ========================================================================== */
  
- #include<stdio.h>
+#include<stdio.h>
 #include<stdlib.h>
 
 struct node* createNode(int data);
