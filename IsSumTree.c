@@ -64,10 +64,7 @@ int isSumTree(struct node* root) {
 		return root->data;
 	}
 
-	int leftSum = isSumTree(root->left);
-	int rightSum = isSumTree(root->right);
-
-	int rootSum = leftSum + rightSum;
+	int rootSum = isSumTree(root->left) + isSumTree(root->right);
 
 	if (root->data == rootSum) { // root data matches sum of children
 		return (root->data + rootSum);
