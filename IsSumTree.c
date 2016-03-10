@@ -19,9 +19,19 @@ struct node {
 	struct node* right;
 };
 
+/*
+	
+	26 
+      /    \ 
+    10      3 
+   /   \     \ 
+  4    6      3
+  
+*/
+
 int main() {
 
-	struct node *root = createNode(26);
+	struct node *root = createNode(26);                             
 	root->left = createNode(10);
 	root->right = createNode(3);
 	root->left->left = createNode(4);
