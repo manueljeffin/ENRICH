@@ -2,8 +2,8 @@
  IsSumTree.c
  Aparna Lavanya K
  
- Program to check if a Binary tree
- is Sum tree or not
+ Program to check if a 
+ Binary tree is Sum tree
  ========================================================================== */
  
  #include<stdio.h>
