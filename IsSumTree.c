@@ -3,7 +3,7 @@
  Aparna Lavanya K
  
  Program to check if a 
- Binary tree is Sum tree
+ Binary Tree is Sum Tree
  ========================================================================== */
  
 #include<stdio.h>
