@@ -19,7 +19,7 @@ struct node {
 	struct node* right;
 };
 
-/*
+/* 
 	
 	    26 
       /    \ 
