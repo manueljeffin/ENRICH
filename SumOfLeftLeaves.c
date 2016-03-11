@@ -30,17 +30,18 @@ struct node {
 */
 
 int main() {
+	
 	int sum = 0;
 
-	struct node *root = createNode(10);
+	struct node *root          = createNode(10);
 
-	root->left = createNode(9);
-	root->right = createNode(8);
+	root->left                 = createNode(9);
+	root->right                = createNode(8);
 
-	root->right->left = createNode(7);
-	root->right->right = createNode(6);
+	root->right->left          = createNode(7);
+	root->right->right         = createNode(6);
 
-	root->right->right->left = createNode(5);
+	root->right->right->left   = createNode(5);
 
 	sumOfLeftLeaves(root, &sum);
 
