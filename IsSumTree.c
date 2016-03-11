@@ -31,12 +31,16 @@ struct node {
 
 int main() {
 
-	struct node *root     = createNode(26);                             
+	struct node *root     = createNode(26); 
+	
 	root->left            = createNode(10);
 	root->right           = createNode(3);
+	
 	root->left->left      = createNode(4);
 	root->left->right     = createNode(6);
+	
 	root->right->right    = createNode(3);
+
 
 	if (isSumTree(root) == -1) {
 		printf("NO! It is not a Sum Tree ");
