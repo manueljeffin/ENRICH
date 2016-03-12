@@ -8,6 +8,9 @@
  
 #include<stdio.h>
 #include<stdlib.h>
+#include<limits.h>
+
+#define FLAG INT_MIN
 
 struct node* createNode(int data);
 int isLeaf(struct node* root);
@@ -42,7 +45,7 @@ int main() {
 	root->right->right    = createNode(3);
 
 
-	if (isSumTree(root) == -1) {
+	if (isSumTree(root) == FLAG) {
 		printf("NO! It is not a Sum Tree ");
 	}
 
@@ -85,6 +88,6 @@ int isSumTree(struct node* root) {
 	}
 
 	else { // root data & sum mismatch
-		return -1;
+		return FLAG;
 	}
 }
