@@ -155,8 +155,7 @@ int wordify(char* para, char** wordList, int* wordsCount) {
 		else {
 			if (j > 0) {
 				word[j] = '\0';
-				wordList[*wordsCount] =
-					(char*)malloc((strlen(word) + 1)*sizeof(char));
+				wordList[*wordsCount] = (char*)malloc((strlen(word) + 1)*sizeof(char));
 				// update word to list
 				strcpy(wordList[*wordsCount], word);
 				(*wordsCount)++;
