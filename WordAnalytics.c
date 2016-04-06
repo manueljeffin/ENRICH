@@ -76,11 +76,6 @@ int main() {
 
 	printf("\nTotal Number of Symbols: %d\n", symbolsCount);
 
-	printf("\nLetter Frequency: \n\n");
-	for (i = 0; i < 26; i++) {
-		printf("%c\t%d\n", i + 'A', letterFreq[i]);
-	}
-
 	int threeWords[3];
 	int wordFlag = threeMostCommonWords(words, hashCount, threeWords);
 	if (wordFlag == -1) {
