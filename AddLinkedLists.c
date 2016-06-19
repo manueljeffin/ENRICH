@@ -55,6 +55,7 @@ struct node* insertNode(int data, struct node *head) {
 }
 
 struct node* makeList(int num) {
+	
 	struct node *head = NULL;
 
 	do {
@@ -67,6 +68,7 @@ struct node* makeList(int num) {
 }
 
 struct node* reverseList(struct node *head) {
+	
 	struct node *newHead = NULL;
 	struct node *temp;
 
@@ -147,6 +149,7 @@ struct node* addLists(struct node *h1, struct node *h2) {
 }
 
 void displayNum(struct node *head) {
+	
 	while (head != NULL) {
 		printf("%d", head->data);
 		head = head->next;
