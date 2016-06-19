@@ -1,4 +1,3 @@
-
 /* ==========================================================================
  WordAnalytics.c
  Aparna Lavanya K
@@ -31,6 +30,7 @@ int wordsUsedOnce(struct hash *words, int hashCount);
 int lettersNotUsed(int* letterFreq, int* notUsed);
 
 int main() {
+	
 	struct hash words[100], firstWords[10];
 	char* wordList[30];
 	int i, temp;
@@ -54,7 +54,8 @@ int main() {
 	para = strtok(text, delimiter);
 
 	while (para != NULL) {
-		// break para into words
+		
+		// break paragraph into words
 		temp = wordify(para, wordList, &wordsCount);
 
 		for (i = 0; i < temp; i++) { // hash each word
@@ -117,6 +118,7 @@ int main() {
 }
 
 void hashing(char* word, struct hash *words, int* hashCount) {
+	
 	int i;
 	int flag = 0;
 
@@ -137,6 +139,7 @@ void hashing(char* word, struct hash *words, int* hashCount) {
 }
 
 int wordify(char* para, char** wordList, int* wordsCount) {
+	
 	int i = 0, j = 0;
 	int count = 0;
 	char word[15];
@@ -164,6 +167,7 @@ int wordify(char* para, char** wordList, int* wordsCount) {
 }
 
 int letterFrequency(char* para, int* letterFreq) {
+	
 	int i = 0;
 	int letterCount = 0; // total number of letters
 
@@ -179,6 +183,7 @@ int letterFrequency(char* para, int* letterFreq) {
 }
 
 int symbolCount(char* para) {
+	
 	int i = 0;
 	int count = 0;
 
@@ -193,6 +198,7 @@ int symbolCount(char* para) {
 }
 
 int mostCommonWord(struct hash *words, int hashCount) {
+	
 	int i;
 	int max = -1;
 	int wordPos = 0;
@@ -208,6 +214,7 @@ int mostCommonWord(struct hash *words, int hashCount) {
 }
 
 int threeMostCommonWords(struct hash *words, int hashCount, int* threeWords) {
+	
 	int i;
 
 	if (hashCount < 3) {
@@ -227,6 +234,7 @@ int threeMostCommonWords(struct hash *words, int hashCount, int* threeWords) {
 }
 
 int mostCommonLetter(int* letterFreq) {
+	
 	int i, max = -1;
 	int letterPos = 0;
 
@@ -241,6 +249,7 @@ int mostCommonLetter(int* letterFreq) {
 }
 
 int threeMostCommonLetters(int* letterFreq, int* threeLetters) {
+	
 	int i;
 
 	for (i = 0; i < 3; i++) {
@@ -261,6 +270,7 @@ int threeMostCommonLetters(int* letterFreq, int* threeLetters) {
 }
 
 void firstWordHash(char* para, struct hash *firstWords, int* firstWordsCount) {
+	
 	char firstWord[15];
 	int i = 0, j = 0;
 	int flag = 0;
@@ -284,11 +294,11 @@ void firstWordHash(char* para, struct hash *firstWords, int* firstWordsCount) {
 		// so create new hash key
 		firstWords[*firstWordsCount].freq = 1;
 		(*firstWordsCount)++;
-
 	}
 }
 
 char* mostCommonFirstWord(struct hash *firstWords, int firstWordsCount) {
+	
 	int i;
 	int max = 0;
 	char* mostCommon;
@@ -304,6 +314,7 @@ char* mostCommonFirstWord(struct hash *firstWords, int firstWordsCount) {
 }
 
 int wordsUsedOnce(struct hash *words, int hashCount) {
+	
 	int i;
 	int usedOnceCount = 0;
 
@@ -317,6 +328,7 @@ int wordsUsedOnce(struct hash *words, int hashCount) {
 }
 
 int lettersNotUsed(int* letterFreq, int* notUsed) {
+	
 	int i;
 	int j = 0;
 
