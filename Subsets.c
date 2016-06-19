@@ -35,7 +35,7 @@ void subsets(int *arr, int size) {
 	int numSubsets = 1 << size;
 	
 	for (i = 1; i < numSubsets; i++) {
-		for (j = 0; j < size && j < i; j++) {
+		for (j = 0; j < size; j++) {
 			if (i & (1 << j)) {
 				printf("%d ", arr[j]);
 			}
