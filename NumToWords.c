@@ -34,7 +34,7 @@ int main() {
 }
 
 void twoDigits(int num) {
-	if (num <= 20) {
+	if (num < 21) {
 		printf("%s ", words[num]);
 		return;
 	}
