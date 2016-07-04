@@ -35,13 +35,13 @@ void main() {
 	scramblePuzzle(puzzle);
 
 	do {
-		system("clear");
+		system("clear"); //clear the sreen
 		printPuzzle(puzzle);
 
 		printf("\nPress U ->Up, D ->Down, L ->Left, R ->Right, Q ->Quit\n");
 		printf("\nEnter a move: ");
 		scanf("%c", &move);
-		move = toupper(move);
+		move = toupper(move);//inbuilt function that converts lower case to upper case
 
 		slide(puzzle, move);
 
@@ -86,13 +86,13 @@ void scramblePuzzle(int** puzzle) {
 	int i, key;
 	char move[4] = {'U', 'D', 'L', 'R'};
 
-	srand(time(NULL));
+	srand(time(NULL)); //very important line, and we have to add time.h as a header file
 
 	// dynamically rearrange the numbers in the puzzle
 	while (isSolved(puzzle)) {
 		for (i = 0; i < 25; i++) {
-			key = rand() % 4;
-			slide(puzzle, move[key]);
+			key = rand() % 4; //rand() returns a number <= 32767
+			slide(puzzle, move[key]); //make moves just to rearrange
 		}
 	}
 }
@@ -112,7 +112,7 @@ void printPuzzle(int** puzzle) {
 }
 
 void slide(int** puzzle, char move) {
-	int row, col;
+	int row, col; //local variables
 	char temp;
 
 	switch (move) {   // find the position to move the empty cell into
@@ -140,7 +140,7 @@ void slide(int** puzzle, char move) {
 		return;
 	}
 
-	// check if the position is valid
+	// check if the position is invalid
 	if (row < 0 || row == size || col < 0 || col == size) {
 		return;
 	}
