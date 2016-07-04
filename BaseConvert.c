@@ -26,7 +26,7 @@ int main() {
 }
 
 void baseConvert(int num, int base) {
-
+	//this array is the trick
 	char digits[36] = {
 		'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D',
 		'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
@@ -48,14 +48,14 @@ void baseConvert(int num, int base) {
 	}
 
 	while (n > 0) { // convert to given base
-		result[count++] = digits[n % base];
+		result[count++] = digits[n % base]; //brilliant trick
 		n /= base;
 	}
 	result[count] = '\0';
 
-	half = count / 2;
+	half = count / 2; //cool, cos we will do only count/2 swaps to reverse
 	// reverse the string
-	for (i = 0; i < half; i++) {
+	for (i = 0; i < half; i++) { 
 		temp = result[i];
 		result[i] = result[count - i - 1];
 		result[count - i - 1] = temp;
