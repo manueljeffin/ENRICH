@@ -19,7 +19,7 @@ struct student {
 struct hash {
 	char firstName[10];
 	int count;
-	int ids[10];
+	int ids[10];//stores the varios indexes for a same name
 }*h;
 
 void findFirstNames(struct student*, int);
@@ -58,7 +58,7 @@ int main() {
 	return 0;
 }
 
-void findFirstNames(struct student *s, int numStud) {
+void findFirstNames(struct student *s, int numStud) { //we will have only first names in firstName[]
 	int i, j, k;
 
 	for (i = 0; i < numStud; i++) {
@@ -93,7 +93,7 @@ int findKey(char* name, int keysCount) {
 	return -1;
 }
 
-int hashing(struct student *s, int numStud) {
+int hashing(struct student *s, int numStud) {//brilliant way of hashing
 	int i;
 	h = (struct hash*)malloc(numStud*sizeof(struct hash));
 	int keysCount = 0;
